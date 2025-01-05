@@ -41,8 +41,8 @@ namespace HomeWork13.Classes
                 Add(item);
         }
 
-        public void Add(string item) 
-        { 
+        public void Add(string item)
+        {
             CurItem = new StackItem(CurItem, item);
             size++;
         }
@@ -58,6 +58,25 @@ namespace HomeWork13.Classes
         }
 
         public int Size { get { return size; } }
+
+        /*StackItem должен быть public
+        public void AddItem(StackItem item)
+        {
+            item.PrevItem = this.CurItem;
+            CurItem = item;
+            size++;
+        }
+
+        public StackItem PopItem()
+        {
+            if (this.CurItem == null)
+                throw new Exception("Стек пустой");
+            StackItem item = this.CurItem;
+            this.CurItem = this.CurItem.PrevItem;
+            size--;
+            return item;
+        }*/
+
 
         public string Top
         {
