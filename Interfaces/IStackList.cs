@@ -14,14 +14,5 @@ namespace HomeWork13.Interfaces
         public string Pop();
         public int Size { get; }
         public string Top { get; }
-        public static IStackList Concat(params IStackList[] stackLists)
-        {
-            StackList s = new StackList();
-            foreach (var stackList in stackLists)
-                //s.Merge(stackList);
-                while (stackList.Size > 0)
-                    s.Add(stackList.Pop());
-            return s;
-        }
     }
 }
