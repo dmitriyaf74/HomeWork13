@@ -11,7 +11,7 @@ namespace HomeWork13.Classes
 {
     /// <summary>
     /// Расширения для 2х классов
-    /// Можно сделать общего родителя
+    /// Можно сделать общего родителя, но будем считать, что оба класса недоступны для изменений
     /// </summary>
     public static class StackListExtensions
     {
