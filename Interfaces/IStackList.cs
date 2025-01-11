@@ -13,6 +13,6 @@ namespace HomeWork13.Interfaces
         public void Add(string item);
         public string Pop();
         public int Size { get; }
-        public string Top { get; }
+        public string? Top { get; }
     }
 }

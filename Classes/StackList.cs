@@ -14,7 +14,7 @@ namespace HomeWork13.Classes
     /// </summary>
     public class StackList: IStackList
     {
-        List<string> _StackList = new List<string> {};
+        private readonly List<string> _stackList = new List<string> {};
 
         public StackList() {}
 
@@ -29,28 +29,28 @@ namespace HomeWork13.Classes
                 Add(item);
         }
 
-        public void Add(string item) { _StackList.Add(item); }
+        public void Add(string item) { _stackList.Add(item); }
 
         public string Pop()
         {
             if (Size == 0)
                 throw new Exception("Стек пустой");
             int itemindex = Size - 1;
-            string item = this._StackList[itemindex];
-            this._StackList.RemoveAt(itemindex);
+            string item = this._stackList[itemindex];
+            this._stackList.RemoveAt(itemindex);
             return item;
         }
 
-        public int Size { get { return _StackList.Count; } }
+        public int Size { get { return _stackList.Count; } }
 
-        public string Top 
+        public string? Top 
         {  
             get 
             {
                 if (Size == 0)
                     return null;
                 else
-                    return this._StackList[Size - 1]; 
+                    return this._stackList[Size - 1]; 
             } 
         }
 

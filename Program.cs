@@ -8,7 +8,7 @@ namespace HomeWork13
 
         private static void TaskMain(Type ClassType)
         {
-            IStackList s = Activator.CreateInstance(ClassType) as IStackList;
+            IStackList? s = Activator.CreateInstance(ClassType) as IStackList;
             s.Init("a", "b", "c");
             // size = 3, Top = 'c'
             Console.WriteLine($"size = {s.Size}, Top = '{s.Top}'");

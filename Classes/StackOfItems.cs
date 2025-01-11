@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using HomeWork13.Classes;
 using HomeWork13.Interfaces;
-using HomeWork13.Interfaces;
 
 namespace HomeWork13.Classes
 {
@@ -17,15 +16,15 @@ namespace HomeWork13.Classes
         private class StackItem
         {
             public string Value;
-            public StackItem PrevItem;
-            public StackItem(StackItem prevItem, string value)
+            public StackItem? PrevItem;
+            public StackItem(StackItem? prevItem, string value)
             {
                 PrevItem = prevItem;
                 Value = value;
             }
         }
 
-        StackItem CurItem = null;
+        StackItem? CurItem = null;
         int size = 0;
 
 
@@ -78,14 +77,16 @@ namespace HomeWork13.Classes
         }*/
 
 
-        public string Top
+        public string? Top
         {
             get
             {
                 if (Size == 0)
                     return null;
+                else if (CurItem == null)
+                    return null;
                 else
-                    return this.CurItem.Value;
+                    return CurItem.Value;
             }
         }
 
